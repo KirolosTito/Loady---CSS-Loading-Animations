@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loady - CSS Loading Animations</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .container {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: wrap;
+            margin-top: 50px;
+        }
+
+        .loader {
+            margin: 20px;
+        }
+
+        .label {
+            margin-top: 10px;
+            font-size: 1rem;
+        }
+
+        /* Spinning Circle */
+        .spinning-circle {
+            width: 50px;
+            height: 50px;
+            border: 5px solid #cccccc;
+            border-top: 5px solid #2980B9;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        /* Bouncing Dot */
+        .bouncing-dot {
+            width: 20px;
+            height: 20px;
+            background-color: #2980B9;
+            border-radius: 50%;
+            animation: bounce 1.5s ease-in-out infinite;
+        }
+
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-30px);
+            }
+        }
+
+        /* Pulsating Ring */
+        .pulsating-ring {
+            width: 60px;
+            height: 60px;
+            border: 5px solid #2980B9;
+            border-radius: 50%;
+            animation: pulse 2s ease-out infinite;
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+                opacity: 1;
+            }
+            100% {
+                transform: scale(1.5);
+                opacity: 0;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Loady - CSS Loading Animations</h1>
+    <p>A collection of smooth, modern loading animations.</p>
+    <div class="container">
+        <!-- Spinning Circle -->
+        <div class="loader">
+            <div class="spinning-circle"></div>
+            <div class="label">Spinning Circle</div>
+        </div>
+
+        <!-- Bouncing Dot -->
+        <div class="loader">
+            <div class="bouncing-dot"></div>
+            <div class="label">Bouncing Dot</div>
+        </div>
+
+        <!-- Pulsating Ring -->
+        <div class="loader">
+            <div class="pulsating-ring"></div>
+            <div class="label">Pulsating Ring</div>
+        </div>
+    </div>
+</body>
+</html>
